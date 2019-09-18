@@ -1,0 +1,37 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+
+.card{
+    width: 20%;
+    height: 60%;
+    margin-left:35%;
+    margin-top: 7%; 
+    display: flex;
+    flex-direction: column;
+}
+
+mat-form-field{
+    width: 60%;
+    height: 10px;
+    padding-left: 20%;
+    padding-top: 10%;
+}
+
+
+
+.matbutton{
+    margin-left: 20%;
+    margin-top: 10%;
+
+}
+
+div{
+    margin-left: 10%;
+    margin-top: 5%;
+    color: red;
+    font-size: 10px;
+}
+

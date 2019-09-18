@@ -1,0 +1,28 @@
+<mat-card class="card">
+  <mat-card-title style="color:#000080;">Login</mat-card-title>
+  <form [formGroup]="userForm" (click)="onSubmit()">
+    <div *ngIf="invalidLogin" class="alert alert-dna"></div>
+    
+    <mat-form-field>
+      <input matInput placeholder="Email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" >
+    </mat-form-field>
+    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+      <div *ngIf="f.email.errors.required">Email is required</div>
+      <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+    </div>
+  
+    <mat-form-field>
+      <input matInput type="password" placeholder="Password"  formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+    </mat-form-field>
+    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+      <div *ngIf="f.password.errors.required">Password is required</div>
+      <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+    </div>
+      
+    <button  mat-raised-button color="primary" class="matbutton">
+        Submit
+    </button>
+   <p> {{msg}}</p>
+
+  </form> 
+</mat-card>
